@@ -23,8 +23,10 @@ const GameProvider = ({ children }) => {
     let index = categories.indexOf(curCategory);
     if (index === categories.length - 1) {
       setCurCategory(categories[0]);
+      setCurPhrases(categories[0].phrases);
     } else {
       setCurCategory(categories[categories.indexOf(curCategory) + 1]);
+      setCurPhrases(categories[categories.indexOf(curCategory) + 1].phrases);
     }
   };
 
